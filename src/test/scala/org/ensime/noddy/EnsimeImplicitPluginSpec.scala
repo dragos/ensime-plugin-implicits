@@ -9,7 +9,14 @@ class EnsimeImplicitPluginSpec extends FlatSpec with Matchers {
       println(mr.messages)
 
       val foo = List()
+    }
+  }
 
+  it should "replace simple cachedImplicit a second time" in {
+    withMrPlod("Simple1.scala") { mr =>
+      println(mr.messages)
+
+      val foo = List()
     }
   }
 }
